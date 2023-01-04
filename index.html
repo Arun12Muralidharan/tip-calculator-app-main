@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        margin: 2rem;
+        font-size: 11px;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .my-name {
+        font-weight: bold;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="./script/scripts.js" defer></script>
+  </head>
+  <body>
+    <header><img src="./images/logo.svg" alt="splitter logo" /></header>
+    <main class="container">
+      <section class="left">
+        <div class="bill-amount">
+          <div class="inner-error">
+            <p>Bill</p>
+            <p class="error hide amount-error">Invalid Amount</p>
+          </div>
+          <input
+            type="number"
+            name="bill-amount"
+            id="bill-amount"
+            placeholder="0"
+            min="0"
+          />
+        </div>
+        <div class="tip-percentage-box">
+          <div class="inner-error">
+            <p>Select Tip %</p>
+            <p class="error hide tip-error">Invalid tip</p>
+          </div>
+          <div class="tip-grid-box">
+            <div class="tip-percentage" id="5">5%</div>
+            <div class="tip-percentage" id="10">10%</div>
+            <div class="tip-percentage" id="15">15%</div>
+            <div class="tip-percentage" id="25">25%</div>
+            <div class="tip-percentage" id="50">50%</div>
+            <div class="tip-percentage" id="custom">
+              <input
+                type="number"
+                name="custom"
+                id="custom-input"
+                placeholder="Custom"
+                min="0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="head-count">
+          <div class="inner-error">
+            <p>Number of People</p>
+            <p class="error hide count-error">Invalid Count</p>
+          </div>
+          <input
+            type="number"
+            name="head-count"
+            id="head-count"
+            placeholder="0"
+            min="1"
+          />
+        </div>
+      </section>
+      <section class="right">
+        <div class="split">
+          <div class="text-content">
+            <p>Tip Amount</p>
+            <span>/ person</span>
+          </div>
+          <div class="value"><h1 class="tip-display">$0.00</h1></div>
+        </div>
+        <div class="split">
+          <div class="text-content">
+            <p>Total</p>
+            <span>/ person</span>
+          </div>
+          <div class="value"><h1 class="total-display">$0.00</h1></div>
+        </div>
+        <div class="buttons">
+          <button class="btn btn-reset hide">Reset</button>
+          <button class="btn btn-submit">Submit</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <span class="my-name">Arun&nbsp;Muralidharan</span>.
+    </footer>
+  </body>
+</html>
